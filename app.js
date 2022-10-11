@@ -9,40 +9,31 @@ const cert = fs.readFileSync('keys/certificate.pem')
 const options = {
     server: {sslCA: cert}};
 const connstring = "mongodb+srv://adminjosh:ZX8S3mpL6UHt5ne@cluster0.ecr945g.mongodb.net/?retryWrites=true&w=majority"
+
+const fruitRoutes = require('./routes/fruit');
+const userRoutes = require('./routes/user')
 mongoose.connect(connstring).then(()=>
-{git
+{
     console.log('Connected :-D')
 }).catch(()=>{
     console.log('Not Connected:-(')
 }, options);
 
+app.use(express.json())
+
+app.use((req, res, next)=>{
+    res.setHeader('Access-Control-Allow-Origin','*');
+    res.setHeader('Access-Control-Allow-Headers','Origin,X-Requested-With,Content-Type,Accept,Authorization');
+    res.setHeader('Access-Control-Allow-Methods','*');
+    next();
+})
 app.get(urlprefix +'/',(req,res)=>
 {
     res.send('Hello World')
 })
 
-app.get(urlprefix +'/orders',(req,res)=>
-{
-    const orders = [
-        {
-            id: "1",
-            name: "Orange"
-        },
-        {
-            id: "2",
-            name: "Banana"
-        },
-        {
-            id: "3",
-            name: "Pear"
-        }
-    ]
-    res.json(
-        {
-            message: "Fruits",
-            orders: orders
-        }
-    )
-})
+app.use(urlprefix+'/fruits', fruitRoutes)
+app.use(urlprefix+'/users', userRoutes)
+
 
 module.exports = app;
