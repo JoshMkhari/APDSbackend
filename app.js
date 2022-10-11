@@ -1,3 +1,6 @@
+//https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+
+//https://www.w3schools.com/nodejs/nodejs_modules.asp
 const express = require('express')
 const app = express()
 const urlprefix = '/api'
@@ -28,6 +31,7 @@ app.use((req, res, next)=>{
     res.setHeader('Access-Control-Allow-Methods','*');
     next();
 })
+//https://expressjs.com/en/starter/hello-world.html
 app.get(urlprefix +'/',(req,res)=>
 {
     res.send('Hello World')

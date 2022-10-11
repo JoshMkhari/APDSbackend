@@ -1,21 +1,25 @@
 GET https://localhost:3000/api/issue HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJ1c2VySWQiOiI2MzQ1YTFiYjIyNzEyYmM2OTU2ZmZiZWUiLCJpYXQiOjE2NjU1MDgzNjUsImV4cCI6MTY2NTUxMTk2NX0.JNPAknzkzgIos1XDtRbhiW533mc0NVEyQuTKUqGSwro
+
 ###
 POST https://localhost:3000/api/issue HTTP/1.1
 content-type: application/json
 
 {
-  "id": "1",
-  "name": "Load Shedding"
+  "id": "2",
+  "name": "Systems down"
 }
 ###
-DELETE https://localhost:3000/api/issue/634533b506e3ee3b4a7d7eb3 HTTP/1.1
+DELETE https://localhost:3000/api/issue/6345a43b22712bc6956ffbf1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJ1c2VySWQiOiI2MzQ1YTFiYjIyNzEyYmM2OTU2ZmZiZWUiLCJpYXQiOjE2NjU1MDgzNjUsImV4cCI6MTY2NTUxMTk2NX0.JNPAknzkzgIos1XDtRbhiW533mc0NVEyQuTKUqGSwro
+
 ###
 POST https://localhost:3000/api/users/signup HTTP/1.1
 content-type: application/json
 
 {
-  "username": "hello",
-  "password": "hello"
+  "username": "test",
+  "password": "user"
 }
 ###
 DELETE https://localhost:3000/api/users/634533b106e3ee3b4a7d7eb1 HTTP/1.1
@@ -24,16 +28,16 @@ POST https://localhost:3000/api/users/login HTTP/1.1
 content-type: application/json
 
 {
-  "username": "hello",
-  "password": "hello"
+  "username": "test",
+  "password": "user"
 }
 ###
 POST https://localhost:3000/api/issue HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pbmUiLCJ1c2VySWQiOiI2MzQ1NmViNGE0OTYzNTAxZGJlOGQwY2QiLCJpYXQiOjE2NjU1MDE0MTcsImV4cCI6MTY2NTUwNTAxN30.Q-sppfz2zq-S0DMAS_1otANt8s8WLwtsMdJV0NGG9bQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJ1c2VySWQiOiI2MzQ1YTFiYjIyNzEyYmM2OTU2ZmZiZWUiLCJpYXQiOjE2NjU1MDgzNjUsImV4cCI6MTY2NTUxMTk2NX0.JNPAknzkzgIos1XDtRbhiW533mc0NVEyQuTKUqGSwro
 
 {
-  "id": "1",
-  "name": "Load Shedding"
+  "id": "2",
+  "name": "Systems Down"
 }
 ###

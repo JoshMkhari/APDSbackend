@@ -1,3 +1,4 @@
+//https://www.w3schools.com/nodejs/nodejs_modules.asp
 const express = require('express')
 const router = express.Router();
 const User = require("../models/user");
@@ -45,9 +46,6 @@ router.post('/login',(req, res) => {
             {
                 fetchedUser = user;
                 bcrypt.compare(req.body.password, fetchedUser.password, function(err, result) {
-                    if (err){
-                        console.log("this is error" + err)
-                    }
                     if (result) {
                         const token = jwt.sign({username:fetchedUser.username,userId: fetchedUser._id},
                             'secret_this_should_be_longer_than_it_is',
