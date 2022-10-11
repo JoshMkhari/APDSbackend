@@ -14,15 +14,18 @@ router.post('/signup',(req, res)=>{
                     password: hash
                 }
             );
-            user.save();
-            res.status(201).json({
-                message:'User Created',
-                user:user
-            });
-        }).catch(err =>{
-            res.status(500).json({
-                error:err
-            });
+            user.save()
+                .then(result => {
+                    res.status(201).json({
+                        message:'User Created',
+                        user:user
+                    });
+                }).
+            catch(err =>{
+                res.status(500).json({
+                    error:err
+                });
+        })
     });
 })
 
@@ -38,20 +41,22 @@ router.post('/login',(req, res) => {
     let fetchedUser;
     User.findOne({username:req.body.username})
         .then(user=>{
-        })
-        .then(result => {
-            if(!result)
+            try
+            {
+                fetchedUser = user;
+                const token = jwt.sign({username:fetchedUser.username,userId: fetchedUser._id},
+                    'secret_this_should_be_longer_than_it_is',
+                    {expiresIn:'1h'},0);
+                res.status(200).json({token:token})
+            }
+            catch (error)
             {
                 return res.status(401).json(
                     {
-                        message: "Authentication Failure Top",
+                        message: "Authentication Failure",
                     }
-                )
-                }
-            const token = jwt.sign({username:fetchedUser.username,userId: fetchedUser._id},
-                'secret_this_should_be_longer_than_it_is',
-                {expiresIn:'1h'},0);
-            res.status(200).json({token:token})
+                );
+            }
         })
         .catch(err =>{
             return res.status(401).json({

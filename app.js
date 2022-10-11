@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const urlprefix = '/api'
 const mongoose = require('mongoose')
-const Fruit = require('./models/fruit')
+const Issue = require('./models/issue')
 const fs = require('fs');
 const cert = fs.readFileSync('keys/certificate.pem')
 
@@ -10,8 +10,9 @@ const options = {
     server: {sslCA: cert}};
 const connstring = "mongodb+srv://adminjosh:ZX8S3mpL6UHt5ne@cluster0.ecr945g.mongodb.net/?retryWrites=true&w=majority"
 
-const fruitRoutes = require('./routes/fruit');
+const issueRoutes = require('./routes/issue');
 const userRoutes = require('./routes/user')
+
 mongoose.connect(connstring).then(()=>
 {
     console.log('Connected :-D')
@@ -32,8 +33,7 @@ app.get(urlprefix +'/',(req,res)=>
     res.send('Hello World')
 })
 
-app.use(urlprefix+'/fruits', fruitRoutes)
+app.use(urlprefix+'/issue', issueRoutes)
 app.use(urlprefix+'/users', userRoutes)
-
 
 module.exports = app;

@@ -1,45 +1,45 @@
 const express = require('express')
 const router = express.Router();
-const Fruit = require("../models/fruit");
+const Issue = require("../models/issue");
 const checkauth = require('../check-auth')
 
 router.get( '',(req,res)=>
 {
-    Fruit.find().then((fruits)=>{
+    Issue.find().then((fruits)=>{
         res.json(
             {
-                message: "Fruits found",
+                message: "Issue found",
                 fruits:fruits
             }
         )
     })
 })
-router.post('',(req, res) =>
+router.post('',checkauth,(req, res) =>
 {
-    const fruit = new Fruit(
+    const issue = new Issue(
         {
             id: req.body.id,
             name: req.body.name
         }
     )
-    fruit.save().then(()=>{
+    issue.save().then(()=>{
         res.status(201).json({
-            message: 'Fruit created',
-            fruit:fruit
+            message: 'Issue created',
+            issue:issue
         })
     });
     res.status(201).json(
         {
-            message: 'Fruit created',
-            fruit: fruit
+            message: 'Issue created',
+            issue: issue
         }
     )
 })
 router.delete('/:id',checkauth,(req, res)=>
 {
-    Fruit.deleteOne({_id: req.params.id})
+    Issue.deleteOne({_id: req.params.id})
         .then((result)=>{
-            res.status(200).json({message : 'Fruit Deleted Successfully'})
+            res.status(200).json({message : 'Issue Deleted Successfully'})
         })
 })
 module.exports = router;

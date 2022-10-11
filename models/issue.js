@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 
-const fruitschema = mongoose.Schema(
+const issueSchema = mongoose.Schema(
     {
         id: {type: String, required: true},
         name: {type:String, required: true}
     }
 )
 
-module.exports = mongoose.model('Fruit',fruitschema)
+module.exports = mongoose.model('Issue',issueSchema)

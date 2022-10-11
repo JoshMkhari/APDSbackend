@@ -1,11 +1,11 @@
 GET https://localhost:3000/api HTTP/1.1
 ###
-POST https://localhost:3000/api/fruits HTTP/1.1
+POST https://localhost:3000/api/issue HTTP/1.1
 content-type: application/json
 Authorization: Bearer
 
 ###
-POST https://localhost:3000/api/fruits HTTP/1.1
+POST https://localhost:3000/api/issue HTTP/1.1
 content-type: application/json
 
 {
@@ -13,7 +13,7 @@ content-type: application/json
   "name": "Apple"
 }
 ###
-DELETE https://localhost:3000/api/fruits/634533b506e3ee3b4a7d7eb3 HTTP/1.1
+DELETE https://localhost:3000/api/issue/634533b506e3ee3b4a7d7eb3 HTTP/1.1
 ###
 POST https://localhost:3000/api/users/signup HTTP/1.1
 content-type: application/json
@@ -32,3 +32,13 @@ content-type: application/json
   "username": "mine",
   "password": "password1"
 }
+###
+POST https://localhost:3000/api/issue HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pbmUiLCJ1c2VySWQiOiI2MzQ1NmViNGE0OTYzNTAxZGJlOGQwY2QiLCJpYXQiOjE2NjU0OTU1NDAsImV4cCI6MTY2NTQ5OTE0MH0.qw0amc-EX5_ameq1FuG8jsMLgUWJj78vmsS5yN7pLok
+
+{
+  "id": "32",
+  "name": "Duck"
+}
+###
