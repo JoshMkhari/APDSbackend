@@ -3,7 +3,7 @@ const router = express.Router();
 const Issue = require("../models/issue");
 const checkauth = require('../check-auth')
 
-router.get( '',(req,res)=>
+router.get( '',checkauth,(req,res)=>
 {
     Issue.find().then((issue)=>{
         res.json(
