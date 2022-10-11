@@ -19,8 +19,8 @@ POST https://localhost:3000/api/users/signup HTTP/1.1
 content-type: application/json
 
 {
-  "username": "mine",
-  "password": "password1"
+  "username": "hello",
+  "password": "hello"
 }
 ###
 DELETE https://localhost:3000/api/users/634533b106e3ee3b4a7d7eb1 HTTP/1.1
@@ -29,16 +29,16 @@ POST https://localhost:3000/api/users/login HTTP/1.1
 content-type: application/json
 
 {
-  "username": "mine",
-  "password": "password1"
+  "username": "hello",
+  "password": "hello"
 }
 ###
 POST https://localhost:3000/api/issue HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pbmUiLCJ1c2VySWQiOiI2MzQ1NmViNGE0OTYzNTAxZGJlOGQwY2QiLCJpYXQiOjE2NjU0OTU1NDAsImV4cCI6MTY2NTQ5OTE0MH0.qw0amc-EX5_ameq1FuG8jsMLgUWJj78vmsS5yN7pLok
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pbmUiLCJ1c2VySWQiOiI2MzQ1NmViNGE0OTYzNTAxZGJlOGQwY2QiLCJpYXQiOjE2NjU1MDE0MTcsImV4cCI6MTY2NTUwNTAxN30.Q-sppfz2zq-S0DMAS_1otANt8s8WLwtsMdJV0NGG9bQ
 
 {
-  "id": "65",
-  "name": "Noice"
+  "id": "209348",
+  "name": "soikdlefjcmvn"
 }
 ###

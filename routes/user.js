@@ -44,16 +44,30 @@ router.post('/login',(req, res) => {
             try
             {
                 fetchedUser = user;
-                const token = jwt.sign({username:fetchedUser.username,userId: fetchedUser._id},
-                    'secret_this_should_be_longer_than_it_is',
-                    {expiresIn:'1h'},0);
-                res.status(200).json({token:token})
+                bcrypt.compare(req.body.password, fetchedUser.password, function(err, result) {
+                    if (err){
+                        console.log("this is error" + err)
+                    }
+                    if (result) {
+                        const token = jwt.sign({username:fetchedUser.username,userId: fetchedUser._id},
+                            'secret_this_should_be_longer_than_it_is',
+                            {expiresIn:'1h'},0);
+                        res.status(200).json({token:token})
+                    } else {
+                        // response is OutgoingMessage object that server response http request
+                        return res.status(401).json(
+                            {
+                                message: "Authentication Failure"
+                            }
+                        );
+                    }
+                });
             }
             catch (error)
             {
                 return res.status(401).json(
                     {
-                        message: "Authentication Failure",
+                        message: "Authentication Failure"
                     }
                 );
             }
