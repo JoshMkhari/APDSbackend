@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router();
 const Fruit = require("../models/fruit");
+const checkauth = require('../check-auth')
 
 router.get( '',(req,res)=>
 {
@@ -34,7 +35,7 @@ router.post('',(req, res) =>
         }
     )
 })
-router.delete(':id',(req, res)=>
+router.delete('/:id',checkauth,(req, res)=>
 {
     Fruit.deleteOne({_id: req.params.id})
         .then((result)=>{
