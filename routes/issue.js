@@ -5,11 +5,11 @@ const checkauth = require('../check-auth')
 
 router.get( '',(req,res)=>
 {
-    Issue.find().then((fruits)=>{
+    Issue.find().then((issue)=>{
         res.json(
             {
                 message: "Issue found",
-                fruits:fruits
+                issue:issue
             }
         )
     })
@@ -28,13 +28,8 @@ router.post('',checkauth,(req, res) =>
             issue:issue
         })
     });
-    res.status(201).json(
-        {
-            message: 'Issue created',
-            issue: issue
-        }
-    )
 })
+
 router.delete('/:id',checkauth,(req, res)=>
 {
     Issue.deleteOne({_id: req.params.id})
