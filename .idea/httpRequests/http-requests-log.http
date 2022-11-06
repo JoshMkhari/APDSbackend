@@ -1,0 +1,184 @@
+POST https://localhost:3000/api/users/signup
+content-type: application/json
+
+{
+  "username": "ubuntu",
+  "password": "user"
+}
+
+<> 2022-11-06T154944.201.json
+
+###
+
+POST https://localhost:3000/api/users/signup
+content-type: application/json
+
+{
+  "username": "ubuntu",
+  "password": "user"
+}
+
+<> 2022-11-06T154843.500.json
+
+###
+
+DELETE https://localhost:3000/api/issue/6345a43b22712bc6956ffbf1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJ1c2VySWQiOiI2MzQ1YTFiYjIyNzEyYmM2OTU2ZmZiZWUiLCJpYXQiOjE2NjU1MDgzNjUsImV4cCI6MTY2NTUxMTk2NX0.JNPAknzkzgIos1XDtRbhiW533mc0NVEyQuTKUqGSwro
+
+<> 2022-11-06T154834.401.json
+
+###
+
+POST https://localhost:3000/api/issue
+content-type: application/json
+
+{
+  "id": "2",
+  "name": "Systems down"
+}
+
+<> 2022-11-06T154830.401.json
+
+###
+
+POST https://localhost:3000/api/issue
+content-type: application/json
+
+{
+  "id": "2",
+  "name": "Systems down"
+}
+
+<> 2022-11-06T154829.401.json
+
+###
+
+POST https://localhost:3000/api/issue
+content-type: application/json
+
+{
+  "id": "2",
+  "name": "Systems down"
+}
+
+<> 2022-11-06T154826.401.json
+
+###
+
+POST https://localhost:3000/api/issue
+content-type: application/json
+
+{
+  "id": "2",
+  "name": "Systems down"
+}
+
+<> 2022-11-06T154824.401.json
+
+###
+
+GET https://localhost:3000/api/issue
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJ1c2VySWQiOiI2MzQ1YTFiYjIyNzEyYmM2OTU2ZmZiZWUiLCJpYXQiOjE2NjU1MDgzNjUsImV4cCI6MTY2NTUxMTk2NX0.JNPAknzkzgIos1XDtRbhiW533mc0NVEyQuTKUqGSwro
+
+<> 2022-11-06T154819.401.json
+
+###
+
+POST https://localhost:3000/api/users/signup
+content-type: application/json
+
+{
+  "username": "ubuntu",
+  "password": "user"
+}
+
+<> 2022-11-06T154701.500.json
+
+###
+
+POST https://localhost:3000/api/users/signup
+content-type: application/json
+
+{
+  "username": "ubuntu",
+  "password": "user"
+}
+
+<> 2022-11-06T154550.500.json
+
+###
+
+POST https://localhost:3000/api/users/signup
+content-type: application/json
+
+{
+  "username": "ubuntu",
+  "password": "user"
+}
+
+<> 2022-11-06T154508.500.json
+
+###
+
+POST https://localhost:3000/api/users/login
+content-type: application/json
+
+{
+  "username": "test",
+  "password": "user"
+}
+
+<> 2022-11-06T154459.401.json
+
+###
+
+GET https://localhost:3000/api/issue
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJ1c2VySWQiOiI2MzQ1YTFiYjIyNzEyYmM2OTU2ZmZiZWUiLCJpYXQiOjE2NjU1MDgzNjUsImV4cCI6MTY2NTUxMTk2NX0.JNPAknzkzgIos1XDtRbhiW533mc0NVEyQuTKUqGSwro
+
+<> 2022-11-06T154452.401.json
+
+###
+
+POST https://localhost:3000/api/users/signup
+content-type: application/json
+
+{
+  "username": "ubuntu",
+  "password": "user"
+}
+
+<> 2022-11-06T154431.500.json
+
+###
+
+POST https://localhost:3000/api/users/signup
+content-type: application/json
+
+{
+  "username": "ubuntu",
+  "password": "user"
+}
+
+<> 2022-11-06T153117.500.json
+
+###
+
+POST https://localhost:3000/api/users/login
+content-type: application/json
+
+{
+  "username": "test",
+  "password": "user"
+}
+
+<> 2022-11-06T153024.401.json
+
+###
+
+GET https://localhost:3000/api/issue
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJ1c2VySWQiOiI2MzQ1YTFiYjIyNzEyYmM2OTU2ZmZiZWUiLCJpYXQiOjE2NjU1MDgzNjUsImV4cCI6MTY2NTUxMTk2NX0.JNPAknzkzgIos1XDtRbhiW533mc0NVEyQuTKUqGSwro
+
+<> 2022-11-06T152957.401.json
+
+###
+

@@ -1,0 +1,9 @@
+{
+  "message": "User Created",
+  "user": {
+    "username": "ubuntu",
+    "password": "$2b$10$aswmRGi2Hel8eIL1DC3EseYlWFUl8EEEcwXe.kTZnmAo44Adk.IFC",
+    "_id": "6367bb78357732ea3095cded",
+    "__v": 0
+  }
+}

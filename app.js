@@ -11,7 +11,7 @@ const cert = fs.readFileSync('keys/certificate.pem')
 
 const options = {
     server: {sslCA: cert}};
-const connstring = "mongodb+srv://adminjosh:ZX8S3mpL6UHt5ne@cluster0.ecr945g.mongodb.net/?retryWrites=true&w=majority"
+const connstring = "mongodb+srv://another:ZX8S3mpL6UHt5ne@apds.kwhd0ds.mongodb.net/?retryWrites=true&w=majority"
 
 const issueRoutes = require('./routes/issue');
 const userRoutes = require('./routes/user')
