@@ -15,7 +15,9 @@ const connstring = "mongodb+srv://another:ZX8S3mpL6UHt5ne@apds.kwhd0ds.mongodb.n
 
 const issueRoutes = require('./routes/issue');
 const userRoutes = require('./routes/user')
+const morgan = require("morgan");
 
+app.use(morgan('tiny'));
 app.use(helmet());
 
 mongoose.connect(connstring).then(()=>
