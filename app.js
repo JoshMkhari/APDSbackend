@@ -8,13 +8,15 @@ const mongoose = require('mongoose')
 const Issue = require('./models/issue')
 const fs = require('fs');
 const cert = fs.readFileSync('keys/certificate.pem')
-
+const helmet = require("helmet");
 const options = {
     server: {sslCA: cert}};
 const connstring = "mongodb+srv://another:ZX8S3mpL6UHt5ne@apds.kwhd0ds.mongodb.net/?retryWrites=true&w=majority"
 
 const issueRoutes = require('./routes/issue');
 const userRoutes = require('./routes/user')
+
+app.use(helmet());
 
 mongoose.connect(connstring).then(()=>
 {
