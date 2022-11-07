@@ -5,8 +5,12 @@ const User = require("../models/user");
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken');
 
+var ExpressBrute = require('express-brute');
 
-router.post('/signup',(req, res)=>{
+var store = new ExpressBrute.MemoryStore(); // stores state locally, don't use this in production
+var bruteforce = new ExpressBrute(store);
+
+router.post('/signup',bruteforce.prevent,(req, res)=>{
     bcrypt.hash(req.body.password,10)
         .then(hash=>{
             const user = new User(
@@ -30,7 +34,7 @@ router.post('/signup',(req, res)=>{
     });
 })
 
-router.delete('/:id',(req, res)=>
+router.delete('/:id',bruteforce.prevent,(req, res)=>
 {
     User.deleteOne({_id: req.params.id})
         .then((result)=>{
@@ -38,8 +42,9 @@ router.delete('/:id',(req, res)=>
         })
 })
 
-router.post('/login',(req, res) => {
+router.post('/login',bruteforce.prevent,(req, res) => {
     let fetchedUser;
+    console.log("we logging in")
     User.findOne({username:req.body.username})
         .then(user=>{
             try

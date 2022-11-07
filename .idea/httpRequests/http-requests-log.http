@@ -1,4 +1,49 @@
 GET https://localhost:3000/api/issue
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVidW50dSIsInVzZXJJZCI6IjYzNjdiYjc4MzU3NzMyZWEzMDk1Y2RlZCIsImlhdCI6MTY2NzgxNTMyNywiZXhwIjoxNjY3ODE4OTI3fQ.V8b2vYhvgLCJ-ylPB5DnGEfK5B53i_aYdn2VcgvZjIQ
+
+<> 2022-11-07T120226.200.json
+
+###
+
+POST https://localhost:3000/api/users/login
+content-type: application/json
+
+{
+  "username": "ubuntu",
+  "password": "user"
+}
+
+<> 2022-11-07T120208.200.json
+
+###
+
+GET https://localhost:3000/api/issue
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVidW50dSIsInVzZXJJZCI6IjYzNjdiYjc4MzU3NzMyZWEzMDk1Y2RlZCIsImlhdCI6MTY2Nzc1MTYzNCwiZXhwIjoxNjY3NzU1MjM0fQ.eEuIufKyCd9uAXCf8K9Di9WI54ftjPvzZgdasqvAPMo
+
+<> 2022-11-06T182054.200.json
+
+###
+
+POST https://localhost:3000/api/users/login
+content-type: application/json
+
+{
+  "username": "ubuntu",
+  "password": "user"
+}
+
+<> 2022-11-06T182034.200.json
+
+###
+
+GET https://localhost:3000/api/issue
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVidW50dSIsInVzZXJJZCI6IjYzNjdiYjc4MzU3NzMyZWEzMDk1Y2RlZCIsImlhdCI6MTY2Nzc0MzYwMSwiZXhwIjoxNjY3NzQ3MjAxfQ.0EwcRMPffatloybbvzBjz5pD1W2ODW6LuJ8MAH5Dzx8
+
+<> 2022-11-06T182026.401.json
+
+###
+
+GET https://localhost:3000/api/issue
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVidW50dSIsInVzZXJJZCI6IjYzNjdiYjc4MzU3NzMyZWEzMDk1Y2RlZCIsImlhdCI6MTY2Nzc0MzYwMSwiZXhwIjoxNjY3NzQ3MjAxfQ.0EwcRMPffatloybbvzBjz5pD1W2ODW6LuJ8MAH5Dzx8
 
 <> 2022-11-06T161527.200.json
