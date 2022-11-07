@@ -100,7 +100,7 @@ router.post('/login',globalBruteforce.prevent,userBruteforce.getMiddleware({
                         res.status(200).json({token:token})
                         // reset the failure counter so next time they log in they get 5 tries again before the delays kick in
                         req.brute.reset(function () {
-                            res.redirect('/'); // logged in, send them to the home page
+                            // logged in, send them to the home page
                         });
                     } else {
                         // response is OutgoingMessage object that server response http request
