@@ -1,3 +1,15 @@
+POST https://localhost:3000/api/users/signup
+content-type: application/json
+
+{
+  "username": "latest",
+  "password": "user"
+}
+
+<> 2022-11-07T200225.201.json
+
+###
+
 GET https://localhost:3000/api/issue
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVidW50dSIsInVzZXJJZCI6IjYzNjdiYjc4MzU3NzMyZWEzMDk1Y2RlZCIsImlhdCI6MTY2NzgxNTMyNywiZXhwIjoxNjY3ODE4OTI3fQ.V8b2vYhvgLCJ-ylPB5DnGEfK5B53i_aYdn2VcgvZjIQ
 
