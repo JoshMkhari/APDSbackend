@@ -1,0 +1,17 @@
+{
+  "message": "Issue found",
+  "issue": [
+    {
+      "_id": "6368dee2c5960eb62eabae39",
+      "id": "5",
+      "name": "Checking duplication",
+      "__v": 0
+    },
+    {
+      "_id": "636942045193416bfae0c10d",
+      "id": "154",
+      "name": "The most unique",
+      "__v": 0
+    }
+  ]
+}

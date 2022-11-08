@@ -1,3 +1,22 @@
+GET https://localhost:3000/api/issue
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyeWFuIiwidXNlcklkIjoiNjM2YTBmYTIzOGMwZjk0NWQ4ZGUyMjljIiwiaWF0IjoxNjY3OTA4NTc4LCJleHAiOjE2Njc5MTIxNzh9.9ImxYyG2oZFNwQxRCxKg3kqZQ2oaUdqkLFRAKlENLv4
+
+<> 2022-11-08T135701.200.json
+
+###
+
+POST https://localhost:3000/api/users/login
+content-type: application/json
+
+{
+  "username": "bryan",
+  "password": "1234"
+}
+
+<> 2022-11-08T135618.200.json
+
+###
+
 POST https://localhost:3000/api/users/signup
 content-type: application/json
 

@@ -1,5 +1,5 @@
 GET https://localhost:3000/api/issue HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVidW50dSIsInVzZXJJZCI6IjYzNjdiYjc4MzU3NzMyZWEzMDk1Y2RlZCIsImlhdCI6MTY2NzgxNTMyNywiZXhwIjoxNjY3ODE4OTI3fQ.V8b2vYhvgLCJ-ylPB5DnGEfK5B53i_aYdn2VcgvZjIQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyeWFuIiwidXNlcklkIjoiNjM2YTBmYTIzOGMwZjk0NWQ4ZGUyMjljIiwiaWF0IjoxNjY3OTA4NTc4LCJleHAiOjE2Njc5MTIxNzh9.9ImxYyG2oZFNwQxRCxKg3kqZQ2oaUdqkLFRAKlENLv4
 
 ###
 POST https://localhost:3000/api/issue HTTP/1.1
@@ -30,8 +30,8 @@ POST https://localhost:3000/api/users/login HTTP/1.1
 content-type: application/json
 
 {
-  "username": "ubuntu",
-  "password": "user"
+  "username": "bryan",
+  "password": "1234"
 }
 ###
 POST https://localhost:3000/api/issue HTTP/1.1
